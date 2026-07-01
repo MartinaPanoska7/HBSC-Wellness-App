@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBalance</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🌿 MindBalance</h1>
+
+    <p class="subtitle">
+        Следи го твоето расположение и развивај здрави навики.
+    </p>
+
+    <div class="card">
+
+        <h2>Како се чувствуваш денес?</h2>
+
+       <div class="mood-buttons">
+
+<button class="mood" data-score="20">😊</button>
+<button class="mood" data-score="10">🙂</button>
+<button class="mood" data-score="0">😐</button>
+<button class="mood" data-score="-10">😔</button>
+<button class="mood" data-score="-20">😭</button>
+
+</div>
+
+        <hr>
+
+        <h2>Дневен внес</h2>
+
+        <label>😴 Колку часа спиеше?</label><br>
+        <input type="number" id="sleep" min="0" max="24"><br><br>
+
+        <label>📱 Колку часа беше на телефон?</label><br>
+        <input type="number" id="phone" min="0" max="24"><br><br>
+
+        <label>🏃 Дали денес беше физички активен?</label><br>
+        <select id="exercise">
+            <option>Да</option>
+            <option>Не</option>
+        </select>
+
+        <br><br>
+
+        <label>😟 Ниво на стрес (1-10)</label><br>
+
+        <input type="range" id="stress" min="1" max="10" value="5">
+
+        <span id="stressValue">5</span>
+
+        <br><br>
+
+        <button id="saveBtn">Зачувај</button>
+
+        <div id="result"></div>
+
+<br>
+
+<canvas id="myChart"></canvas>
+
+</div> <!-- card -->
+
+</div> <!-- container -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
